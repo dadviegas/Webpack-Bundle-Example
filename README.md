@@ -11,7 +11,9 @@ Bundle Files using webpack
 * open index.html or index.min.html and open inspector.
 
 Using Webpack we are including the source map.
-Configuration sourcemap: devtool: 'inline-source-map'.
+
+Configuration sourcemap: 
+```devtool: 'inline-source-map'```
 
 
 # Webpack configuration:
