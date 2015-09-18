@@ -43,3 +43,33 @@ var lib3 = {
 }
 console.log(lib3.text);
 ```
+
+The result will be the js directory.
+
+result of the bundle
+
+```
+> bundlefiles@1.0.0 start /Webpack-Bundle-Example
+> webpack --display-error-details --progress --colors --watch
+
+---------------------------- Files to bundle -----------------------------------------
+[ 'assets/lib/file1.js',
+  'assets/lib/file2.js',
+  'assets/lib/file3.js',
+  'assets/lib/lib.js' ]
+[ 'assets/application/application.js',
+  'assets/application/route/routes.js' ]
+---------------------------- End files to bundle -----------------------------------------
+Hash: 7737766acbf8b1c6b14e
+Version: webpack 1.12.2
+Time: 101ms
+                Asset     Size  Chunks             Chunk Names
+application.bundle.js  4.53 kB       0  [emitted]  application
+        lib.bundle.js  5.54 kB       1  [emitted]  lib
+   [0] ./assets/application/application.js 95 bytes {0} [built]
+   [0] ./assets/lib/lib.js 135 bytes {1} [built]
+   [1] ./assets/application/route/routes.js 68 bytes {0} [built]
+   [2] ./assets/lib/file3.js 68 bytes {1} [built]
+   [3] ./assets/lib/file1.js 68 bytes {1} [built]
+   [4] ./assets/lib/file2.js 75 bytes {1} [built]
+```
