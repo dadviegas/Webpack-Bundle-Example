@@ -1,9 +1,9 @@
 # Webpack-Bundle-Example
 Bundle Files using webpack
 
-# Install
+# Run Install
 
-* Run npm install
+* npm install
 * npm start
 * npm run build
 * npm run buildfiles
