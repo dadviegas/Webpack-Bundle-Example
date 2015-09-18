@@ -15,7 +15,7 @@ Configuration sourcemap: devtool: 'inline-source-map'.
 
 
 # Webpack configuration:
-
+```
 module.exports = {
   context: __dirname,
   devtool: 'inline-source-map',
@@ -30,6 +30,7 @@ module.exports = {
   },
   plugins: getplugins()
 }
+```
 
 To create the lib.bundle.js we use the entry "lib" after that the rest is done in the js file.
 
