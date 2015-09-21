@@ -38,7 +38,7 @@ module.exports = {
   context: __dirname,
   devtool: 'inline-source-map',
   entry: {
-      lib: './assets/lib/lib.js',
+      lib: './assets/lib/lib.es6.js',
       application: './assets/application/application.js'
   },
   output: {
@@ -46,5 +46,17 @@ module.exports = {
     filename: PROD ? "[name].bundle.min.js" : "[name].bundle.js" ,
     libraryTarget: "var"
   },
-  plugins: getplugins()
+  plugins: getplugins(),
+  module: {
+    loaders: [
+      {
+        test: /\.es6.js?$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+      }
+    ],
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    }
+  }
 }
